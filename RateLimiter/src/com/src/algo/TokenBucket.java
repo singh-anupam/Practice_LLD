@@ -25,9 +25,7 @@ public class TokenBucket implements RateLimiter{
 		if(currentCapacity.get()>0) {
 			refreshBucket();
 			currentCapacity.decrementAndGet();
-			
-			
-			
+
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
